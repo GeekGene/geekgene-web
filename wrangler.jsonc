@@ -22,8 +22,8 @@
   // are set with `wrangler secret put` or in the dashboard — never commit them.
   "vars": {
     "CONTACT_TO": "artbrock@geekgene.com",
-    "CONTACT_FROM": "Geek Gene Website <website@mg.geekgene.com>",
-    "MAILGUN_DOMAIN": "mg.geekgene.com",
+    "CONTACT_FROM": "Geek Gene Contact Form <webmaster@mail.geekgene.com>",
+    "MAILGUN_DOMAIN": "mail.geekgene.com",
     "MAILGUN_API_BASE": "https://api.mailgun.net"
   },
 
