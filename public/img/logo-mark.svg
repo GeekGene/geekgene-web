@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="The Geek Gene">
+  <defs>
+    <radialGradient id="gg-orb" cx="38%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#b6ff7a"/>
+      <stop offset=".35" stop-color="#3ddc4a"/>
+      <stop offset=".75" stop-color="#138a2c"/>
+      <stop offset="1" stop-color="#06301a"/>
+    </radialGradient>
+    <linearGradient id="gg-strand-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d9ffd0"/>
+    </linearGradient>
+    <linearGradient id="gg-strand-b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9a4ff"/>
+      <stop offset="1" stop-color="#8a4dff"/>
+    </linearGradient>
+    <clipPath id="gg-clip"><circle cx="60" cy="60" r="54"/></clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#gg-orb)"/>
+  <g clip-path="url(#gg-clip)" transform="rotate(-35 60 60)">
+    <!-- helix rungs -->
+    <g stroke="#06301a" stroke-opacity=".55" stroke-width="2.4" stroke-linecap="round">
+      <line x1="22" y1="52" x2="22" y2="68"/>
+      <line x1="34" y1="47" x2="34" y2="73"/>
+      <line x1="46" y1="52" x2="46" y2="68"/>
+      <line x1="70" y1="52" x2="70" y2="68"/>
+      <line x1="82" y1="47" x2="82" y2="73"/>
+      <line x1="94" y1="52" x2="94" y2="68"/>
+    </g>
+    <!-- strands -->
+    <path d="M4 60 C16 36, 28 36, 40 60 S64 84, 76 60 S100 36, 116 60" fill="none" stroke="url(#gg-strand-a)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M4 60 C16 84, 28 84, 40 60 S64 36, 76 60 S100 84, 116 60" fill="none" stroke="url(#gg-strand-b)" stroke-width="5" stroke-linecap="round"/>
+    <!-- binary bits -->
+    <g font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#eaffdf" fill-opacity=".55">
+      <text x="14" y="34">1</text><text x="30" y="28">0</text><text x="50" y="32">1</text>
+      <text x="64" y="94">0</text><text x="82" y="92">1</text><text x="98" y="86">0</text>
+    </g>
+  </g>
+  <!-- gloss -->
+  <ellipse cx="44" cy="30" rx="26" ry="13" fill="#ffffff" fill-opacity=".22" transform="rotate(-20 44 30)"/>
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#b6ff7a" stroke-opacity=".35" stroke-width="1.5"/>
+</svg>

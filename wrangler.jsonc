@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "geekgene-web",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+
+  // Serve /public as static files. The Worker script only runs for /api/*.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // Custom domains (DNS for geekgene.com is already on Cloudflare).
+  "routes": [
+    { "pattern": "geekgene.com", "custom_domain": true },
+    { "pattern": "www.geekgene.com", "custom_domain": true }
+  ],
+
+  // Non-secret configuration. Secrets (MAILGUN_API_KEY, TURNSTILE_SECRET_KEY)
+  // are set with `wrangler secret put` or in the dashboard — never commit them.
+  "vars": {
+    "CONTACT_TO": "artbrock@geekgene.com",
+    "CONTACT_FROM": "Geek Gene Website <website@mg.geekgene.com>",
+    "MAILGUN_DOMAIN": "mg.geekgene.com",
+    "MAILGUN_API_BASE": "https://api.mailgun.net"
+  },
+
+  "observability": { "enabled": true }
+
+  // Optional: Cloudflare Email Routing transport (used only if MAILGUN_API_KEY is unset).
+  // See DEPLOYMENT.md § "Alternative: Cloudflare email sending".
+  // "send_email": [{ "name": "SEND_EMAIL" }]
+}

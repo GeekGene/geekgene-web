@@ -1,0 +1,8 @@
+# Copy to .dev.vars for local development with `npx wrangler dev`.
+# .dev.vars is git-ignored — never commit real secrets.
+
+# Cloudflare's always-pass Turnstile TEST secret (pairs with the test sitekey in index.html)
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+
+# Your Mailgun sending API key (leave blank to skip sending while testing)
+MAILGUN_API_KEY=
