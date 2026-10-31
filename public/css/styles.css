@@ -709,3 +709,5 @@ p { margin: 0 0 1.1em; }
 /* legacy projects (no live site) */
 .project-static .project-url.project-retired { color: var(--muted); }
 .project-static:hover .project-logo { transform: rotate(-3deg); }
+.project-logo-wide { width: 140px; }
+.project-logo-wide img { width: 120px; height: auto; }
